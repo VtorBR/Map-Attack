@@ -36,34 +36,33 @@ public class DataActivity extends Activity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		Address ad = addresses.get(0);
-		
-		TextView textView = (TextView) findViewById(R.id.textAdminArea);
-		textView.setText(ad.getAdminArea());
-		textView = (TextView) findViewById(R.id.textCountryCode);
-		textView.setText(ad.getCountryCode());
-		textView = (TextView) findViewById(R.id.textCountryName);
-		textView.setText(ad.getCountryName());
-		textView = (TextView) findViewById(R.id.textFeatureName);
-		textView.setText(ad.getFeatureName());
-		textView = (TextView) findViewById(R.id.textLocality);
-		textView.setText(ad.getLocality());
-		textView = (TextView) findViewById(R.id.textPhone);
-		textView.setText(ad.getPhone());
-		textView = (TextView) findViewById(R.id.textPostalCode);
-		textView.setText(ad.getPostalCode());
-		textView = (TextView) findViewById(R.id.textPremises);
-		textView.setText(ad.getPremises());
-		textView = (TextView) findViewById(R.id.textSubAdminArea);
-		textView.setText(ad.getSubAdminArea());
-		textView = (TextView) findViewById(R.id.textSubLocality);
-		textView.setText(ad.getSubLocality());
-		textView = (TextView) findViewById(R.id.textSubThoroughFare);
-		textView.setText(ad.getSubThoroughfare());
-		textView = (TextView) findViewById(R.id.textThoroughfare);
-		textView.setText(ad.getThoroughfare());
-		
+		if(addresses.size() == 0){
+			finish();
+			
+		}else{
+			Address ad = addresses.get(0);
+			TextView textView = (TextView) findViewById(R.id.textCountryName);
+			textView.setText(ad.getCountryName());
+			
+			textView = (TextView) findViewById(R.id.textAdminArea);
+			textView.setText(ad.getAdminArea());
+			
+			textView = (TextView) findViewById(R.id.textSubAdminArea);
+			textView.setText(ad.getSubAdminArea());
+			
+			textView = (TextView) findViewById(R.id.textLocality);
+			textView.setText(ad.getLocality());
+			
+			textView = (TextView) findViewById(R.id.textSubLocality);
+			textView.setText(ad.getSubLocality());
+			
+			textView = (TextView) findViewById(R.id.textThoroughfare);
+			textView.setText(ad.getThoroughfare());
+			
+			textView = (TextView) findViewById(R.id.textSubThoroughFare);
+			textView.setText(ad.getSubThoroughfare());
+			
+		}
 	}
 
 	/**
