@@ -39,9 +39,7 @@
             </intent-filter>
         </activity>
 
-        <meta-data
-            android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyCysaYUSrgRbEAMF9Oo_-0LtsLFb6CJKOY" />
+        
 
         <activity
             android:name="br.com.guerra.mapattack.DataActivity"
@@ -51,6 +49,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="br.com.guerra.mapattack.MapActivity" />
         </activity>
+        
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCWNONT1o2-8AtIg9hAGnEuIdhNWJXwZxo" />
     </application>
 
 </manifest>
